@@ -8,6 +8,10 @@ FROM node
 
 WORKDIR /app
 
+COPY /project/package.json /app
+
+RUN npm install
+
 COPY /project /app
 
 EXPOSE 80 
